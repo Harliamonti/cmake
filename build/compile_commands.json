@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/liamhendricks/repos/cmake/build",
+  "command": "/usr/bin/g++   -O3 -DNDEBUG -o CMakeFiles/Library.dir/src/hello.cpp.o -c /home/liamhendricks/repos/cmake/src/hello.cpp",
+  "file": "/home/liamhendricks/repos/cmake/src/hello.cpp",
+  "output": "CMakeFiles/Library.dir/src/hello.cpp.o"
+},
+{
+  "directory": "/home/liamhendricks/repos/cmake/build",
+  "command": "/usr/bin/g++   -O3 -DNDEBUG -o CMakeFiles/test.dir/main.cpp.o -c /home/liamhendricks/repos/cmake/main.cpp",
+  "file": "/home/liamhendricks/repos/cmake/main.cpp",
+  "output": "CMakeFiles/test.dir/main.cpp.o"
+}
+]
