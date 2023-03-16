@@ -1,0 +1,1 @@
+/usr/bin/g++ -O3 -DNDEBUG CMakeFiles/xyz.dir/main.cpp.o -o /home/liamhendricks/repos/cmake/bin/release/xyz  ../src/liblibTest.a 

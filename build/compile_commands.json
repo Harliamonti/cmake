@@ -1,14 +1,14 @@
 [
 {
-  "directory": "/home/liamhendricks/repos/cmake/build",
-  "command": "/usr/bin/g++   -O3 -DNDEBUG -o CMakeFiles/Library.dir/src/hello.cpp.o -c /home/liamhendricks/repos/cmake/src/hello.cpp",
+  "directory": "/home/liamhendricks/repos/cmake/build/src",
+  "command": "/usr/bin/g++  -I/home/liamhendricks/repos/cmake/src/../include -O3 -DNDEBUG -o CMakeFiles/libTest.dir/hello.cpp.o -c /home/liamhendricks/repos/cmake/src/hello.cpp",
   "file": "/home/liamhendricks/repos/cmake/src/hello.cpp",
-  "output": "CMakeFiles/Library.dir/src/hello.cpp.o"
+  "output": "src/CMakeFiles/libTest.dir/hello.cpp.o"
 },
 {
-  "directory": "/home/liamhendricks/repos/cmake/build",
-  "command": "/usr/bin/g++   -O3 -DNDEBUG -o CMakeFiles/test.dir/main.cpp.o -c /home/liamhendricks/repos/cmake/main.cpp",
-  "file": "/home/liamhendricks/repos/cmake/main.cpp",
-  "output": "CMakeFiles/test.dir/main.cpp.o"
+  "directory": "/home/liamhendricks/repos/cmake/build/app",
+  "command": "/usr/bin/g++  -I/home/liamhendricks/repos/cmake/src/../include -O3 -DNDEBUG -o CMakeFiles/xyz.dir/main.cpp.o -c /home/liamhendricks/repos/cmake/app/main.cpp",
+  "file": "/home/liamhendricks/repos/cmake/app/main.cpp",
+  "output": "app/CMakeFiles/xyz.dir/main.cpp.o"
 }
 ]

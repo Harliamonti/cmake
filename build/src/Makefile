@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liamhendricks/repos/cmake/build/CMakeFiles /home/liamhendricks/repos/cmake/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/liamhendricks/repos/cmake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/liamhendricks/repos/cmake/build/CMakeFiles /home/liamhendricks/repos/cmake/build/src//CMakeFiles/progress.marks
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/liamhendricks/repos/cmake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,44 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/liamhendricks/repos/cmake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named libTest
+# Convenience name for target.
+src/CMakeFiles/libTest.dir/rule:
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/libTest.dir/rule
+.PHONY : src/CMakeFiles/libTest.dir/rule
 
-# Build rule for target.
-libTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libTest
+# Convenience name for target.
+libTest: src/CMakeFiles/libTest.dir/rule
 .PHONY : libTest
 
 # fast build rule for target.
 libTest/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/libTest.dir/build.make src/CMakeFiles/libTest.dir/build
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libTest.dir/build.make src/CMakeFiles/libTest.dir/build
 .PHONY : libTest/fast
 
-#=============================================================================
-# Target rules for targets named xyz
+hello.o: hello.cpp.o
+.PHONY : hello.o
 
-# Build rule for target.
-xyz: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 xyz
-.PHONY : xyz
+# target to build an object file
+hello.cpp.o:
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libTest.dir/build.make src/CMakeFiles/libTest.dir/hello.cpp.o
+.PHONY : hello.cpp.o
 
-# fast build rule for target.
-xyz/fast:
-	$(MAKE) $(MAKESILENT) -f app/CMakeFiles/xyz.dir/build.make app/CMakeFiles/xyz.dir/build
-.PHONY : xyz/fast
+hello.i: hello.cpp.i
+.PHONY : hello.i
+
+# target to preprocess a source file
+hello.cpp.i:
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libTest.dir/build.make src/CMakeFiles/libTest.dir/hello.cpp.i
+.PHONY : hello.cpp.i
+
+hello.s: hello.cpp.s
+.PHONY : hello.s
+
+# target to generate assembly for a file
+hello.cpp.s:
+	cd /home/liamhendricks/repos/cmake/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/libTest.dir/build.make src/CMakeFiles/libTest.dir/hello.cpp.s
+.PHONY : hello.cpp.s
 
 # Help Target
 help:
@@ -151,7 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... libTest"
-	@echo "... xyz"
+	@echo "... hello.o"
+	@echo "... hello.i"
+	@echo "... hello.s"
 .PHONY : help
 
 
@@ -163,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/liamhendricks/repos/cmake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
